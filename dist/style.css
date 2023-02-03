@@ -1,0 +1,295 @@
+@charset "UTF-8";
+* {
+  font-family: "Cormorant", 微軟正黑體;
+  position: relative;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: #FAFAFA;
+}
+
+h1 {
+  color: #414141;
+  text-align: center;
+  font-size: 50px;
+  margin-top: 0px;
+  padding-top: 20px;
+}
+h1:after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 50px;
+  background-color: #ff9999;
+  border-radius: 100%;
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-130%, -30%);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+  border-top: solid 2px #b7aeae;
+}
+.nav .dessert {
+  display: inline-block;
+  padding: 2px 10px;
+  height: 30px;
+  font-weight: 600;
+  margin-right: 100px;
+  font-size: 20px;
+  cursor: pointer;
+  border-color: #ffff80;
+}
+.nav .dessert:hover {
+  border-bottom: solid 5px #ffff80;
+}
+
+.border_bottom {
+  border-bottom: solid 5px #ffff80;
+}
+
+i {
+  font-size: 25px;
+  position: absolute;
+  right: 8%;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+i:hover {
+  background-color: #cfc9c9;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border: solid 1px #ffcc99;
+  padding: 10px;
+  border-radius: 100%;
+  position: absolute;
+  left: -5px;
+  bottom: -5px;
+  background-color: #ffcc99;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s;
+}
+.circle .qty {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.cart {
+  width: 400px;
+  height: 0%;
+  position: absolute;
+  right: 0px;
+  top: 115px;
+  background-color: #FAFAFA;
+  overflow: hidden;
+  transition: 0.5s;
+  z-index: 5;
+  border-radius: 5px;
+}
+.cart .title {
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 18px;
+  border-bottom: solid 2px #b7aeae;
+}
+.cart .x {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #b7aeae;
+  cursor: pointer;
+}
+.cart .shopping {
+  padding: 5px;
+  margin-top: 5px;
+}
+.cart .shopping * {
+  display: inline-block;
+  padding: 2px 5px;
+}
+.cart .shopping .cartname {
+  left: 15px;
+  width: 130px;
+}
+.cart .shopping .cartprice {
+  left: 35px;
+  width: 50px;
+}
+.cart .shopping .calc {
+  left: 60px;
+}
+.cart .shopping .calc .mi, .cart .shopping .calc .pl {
+  user-select: none;
+  cursor: pointer;
+}
+.cart .shopping .calc .nu {
+  width: 30px;
+  text-align: center;
+}
+.cart .shopping .delete {
+  width: 20px;
+  height: 20px;
+  left: 90px;
+  border-radius: 100%;
+  text-align: center;
+  padding: 0px;
+  padding-bottom: 20px;
+  background-color: #e7e4e4;
+  cursor: pointer;
+}
+.cart #total {
+  padding: 15px 0px;
+  width: 90%;
+  position: absolute;
+  bottom: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-top: solid 2px #b7aeae;
+  border-bottom: solid 2px #b7aeae;
+}
+.cart .total, .cart .totalprice {
+  display: inline-block;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.cart .totalprice {
+  left: 60%;
+}
+.cart .cartbuy {
+  position: absolute;
+  bottom: 3%;
+  padding: 10px 0px;
+  width: 90%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #e7e4e4;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.cart .cartbuy:hover {
+  background-color: #cfc9c9;
+}
+.cart .notice {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 270px;
+  height: 50px;
+  border: solid 1px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #FAFAFA;
+  text-align: center;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 800;
+  transform: translate(-50%, -30%);
+  transition: 0.8s;
+  opacity: 0;
+}
+
+.greyscreen {
+  width: 100%;
+  height: 100%;
+}
+.greyscreen::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  position: fixed;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 0;
+  margin-top: 40px;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+  width: calc((100% - 80px - 40px)/3);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+li img {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 5%;
+}
+li .name {
+  margin-top: 10px;
+}
+li .price {
+  font-weight: 500;
+  padding: 5px 0px;
+}
+li .price:before {
+  content: "$";
+}
+li .buy * {
+  display: inline-block;
+}
+li .buy .minus, li .buy .plus {
+  width: 25px;
+  font-size: 25px;
+  font-weight: 300;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+  user-select: none;
+}
+li .buy .minus:hover, li .buy .plus:hover {
+  background-color: #877878;
+  color: #FAFAFA;
+}
+li .buy .num {
+  padding: 0 20px;
+}
+li .buy i {
+  right: 0;
+  font-size: 16px;
+  top: 7px;
+  opacity: 0.5;
+}
+li .buy i:hover {
+  background-color: #cfc9c9;
+  opacity: 1;
+}
