@@ -1,6 +1,6 @@
 
 var dessertlist = [
-  {name:'瑪德蓮', price: '80', num: 1, unit: '1 piece', url: 'https://i.imgur.com/MlARDs7.png'
+  {name:'瑪蓮', price: '80', num: 1, unit: '1 piece', url: 'https://i.imgur.com/MlARDs7.png'
   },
   {name: '手工餅乾', price: '50', num: 1, unit: '3 pieces', url: 'https://i.imgur.com/rWzVvnZ.png'
   },
